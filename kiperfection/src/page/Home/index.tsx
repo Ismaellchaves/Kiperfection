@@ -1,6 +1,6 @@
 import { ArrowRight } from "phosphor-react";
 import { useEffect } from "react";
-import aos from "aos";
+import AOS from "aos";  // Corrigido a importação de AOS
 
 import Background from "@/source/background-home.png";
 import Thumbnail from "@/source/thumbnail-home.png";
@@ -12,15 +12,15 @@ import IK from "@/source/IK.png";
 import Acaivita from "@/source/Acaivita.png";
 import perfumaria from "@/source/perfumaria.png";
 
-import { Platform } from "@/components/Platform";
-import { Static } from "@/components/Static";
+import { Platform } from "../../components/Platform";
+import { Static } from "../../components/Static";
+
 
 export const Home = () => {
   useEffect(() => {
-    aos.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: true });  // Corrigido a inicialização do AOS
   }, []);
 
-  // Dados para cada instância de Platform
   const platformData = [
     {
       title: "Sobre a Kiperfection",
@@ -52,7 +52,6 @@ export const Home = () => {
     },
   ];
 
-  // Dados para cada instância de Static
   const staticData = [
     {
       title: "Milhões de requests por hora em nosso serviço.",
@@ -93,13 +92,14 @@ export const Home = () => {
           </p>
         </div>
         <button
-        onClick={() => window.location.href = 'https://wa.me/5588993799572'}
-        className="flex items-center bg-purple-600 font-bold text-base py-3 px-4 rounded-lg mt-24 hover:bg-purple-700 transition-colors">
-        ENTRE EM CONTATO !
-        <span className="bg-purple-700 p-2 rounded-lg ml-6">
-        <ArrowRight size={24} />
-  </span>
-</button>
+          onClick={() => window.location.href = 'https://wa.me/5588993799572'}
+          className="flex items-center bg-purple-600 font-bold text-base py-3 px-4 rounded-lg mt-24 hover:bg-purple-700 transition-colors"
+        >
+          ENTRE EM CONTATO !
+          <span className="bg-purple-700 p-2 rounded-lg ml-6">
+            <ArrowRight size={24} />
+          </span>
+        </button>
 
         <img
           src={Thumbnail}
@@ -121,11 +121,13 @@ export const Home = () => {
         {/* Renderizando os componentes Platform com dados dinâmicos */}
         <section className="flex flex-wrap max-w-[856px] m-auto justify-between gap-16 mt-28 pb-28">
           {platformData.map((item, index) => (
-            <Platform
-              key={index}
-              title={item.title}
-              description={item.description}
+
+            <Platform 
+            key={index} 
+            title={item.title} 
+            description={item.description} 
             />
+
           ))}
         </section>
 
@@ -225,4 +227,3 @@ export const Home = () => {
     </main>
   );
 };
- 
