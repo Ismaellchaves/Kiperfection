@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/Ismaellchaves/kiperfection",
   "name": "kiperfection",
   "private": true,
   "version": "0.0.0",
@@ -6,12 +7,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "": "file:",
     "aos": "^2.3.4",
-    "fire-frontend": "file:",
+    "fire-frontend": "file:./path/to/fire-frontend",
     "kiperfection": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -22,6 +24,7 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",
     "autoprefixer": "^10.4.8",
+    "gh-pages": "^6.2.0",
     "phosphor-react": "^1.4.1",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8",
