@@ -1,8 +1,11 @@
 ## Fast Frontend
 
-![alt text](https://github.com/Felipeex/fire-frontend/blob/master/src/source/fire-home.png)
-![alt text](https://github.com/Felipeex/fire-frontend/blob/master/src/source/fire-campanys.png)
-![alt text](https://github.com/Felipeex/fire-frontend/blob/master/src/source/fire-statics.png)
+![alt text](<Captura de tela 2024-11-30 184644.png>)
+![alt text](<Captura de tela 2024-11-30 184659.png>)
+![alt text](<Captura de tela 2024-11-30 184713.png>)
+![alt text](<Captura de tela 2024-11-30 184723.png>)
+![alt text](<Captura de tela 2024-11-30 184731.png>)
+![alt text](<Captura de tela 2024-11-30 184741.png>)
 
 ## 💻 Projeto
 
@@ -19,5 +22,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🎨 UI/UX
 
-https://www.figma.com/file/YicFU8tYZ1KjHcVVeTConG/Fire---Design-UI?node-id=0%3A1
 # kiperfection

@@ -11,22 +11,23 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "outDir": "./dist",
-    "allowJs": true,
+    "declaration": true, // Garante que arquivos .d.ts sejam gerados
+    "declarationMap": true, // Cria map de declaração para ajudar na depuração
+    "outDir": "./dist", // Diretório de saída
     "isolatedModules": true,
-    "incremental": true,  // Habilita builds incrementais
-    "noEmitOnError": false // Permite a emissão de arquivos mesmo com erros menores
+    "incremental": true,
+    "noEmitOnError": true // Permite builds apenas se não houver erros
   },
   "include": [
-    "src/**/*.tsx",
-    "src/**/*.ts"
+    "src/**/*.",  // Certifique-se de que todos os arquivos .tsx sejam incluídos
+    "src/**/*.ts"    // Incluir também arquivos .ts
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    "build"
+    "node_modules",  // Não incluir node_modules
+    "dist",          // Excluir diretório de build
+    "build"          // Excluir diretórios de build temporários
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" } // Referência para a configuração do Node
+  ]
 }

@@ -1,6 +1,7 @@
 import { ArrowRight } from "phosphor-react";
 import { useEffect } from "react";
-import AOS from "aos";  // Corrigido a importação de AOS
+import AOS from "aos"; // Corrigido a importação de AOS
+import "aos/dist/aos.css"; // Não se esqueça de incluir o CSS do AOS
 
 import Background from "@/source/background-home.png";
 import Thumbnail from "@/source/thumbnail-home.png";
@@ -15,10 +16,9 @@ import perfumaria from "@/source/perfumaria.png";
 import { Platform } from "../../components/Platform";
 import { Static } from "../../components/Static";
 
-
 export const Home = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });  // Corrigido a inicialização do AOS
+    AOS.init({ duration: 1000, once: true }); // Corrigido a inicialização do AOS
   }, []);
 
   const platformData = [
@@ -121,13 +121,11 @@ export const Home = () => {
         {/* Renderizando os componentes Platform com dados dinâmicos */}
         <section className="flex flex-wrap max-w-[856px] m-auto justify-between gap-16 mt-28 pb-28">
           {platformData.map((item, index) => (
-
             <Platform 
-            key={index} 
-            title={item.title} 
-            description={item.description} 
+              key={index} 
+              title={item.title} 
+              description={item.description} 
             />
-
           ))}
         </section>
 

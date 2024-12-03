@@ -14,4 +14,5 @@ export default defineConfig({
     outDir: 'dist',  // Diretório de saída para o build
     assetsDir: 'assets',  // Diretório de arquivos estáticos
   },
+  base:"/kiperfection"
 });
